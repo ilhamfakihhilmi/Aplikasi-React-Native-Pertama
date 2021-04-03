@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
-import { Text, View, Image, TextInput, StyleSheet } from 'react-native';
+import { Text, View, Image, TextInput, StyleSheet, ScrollView } from 'react-native';
 import legion from '../MyTestApp/img/legion.jpg'
 
 const App = () => {
   return (
+    <ScrollView>
+      <SampleComponent/>
     <StylingReactNativeComponent />
+    </ScrollView>
   )
 }
 
@@ -18,11 +21,11 @@ const StylingReactNativeComponent = () => {
         backgroundColor: '#0abde3',
         borderWidth: 2,
         borderColor: 'red',
-        marginTop: 20,
+        marginVertical: 20,
         marginLeft: 20,
       }} 
       />
-    <View style={{padding:12, backgroundColor: '#f2f2f2', width:212, borderRadius: 10}}>
+    <View style={{padding:12, backgroundColor: 'lightgray', width:212, borderRadius: 10, marginHorizontal: 20}}>
       <Image source={legion} style={{ width: 188, height: 107, borderRadius: 8}} />
       <Text style={{fontSize: 14, fontWeight: 'bold', marginTop: 16}}>Legion 5i i7 10750H</Text>
       <Text style={{fontSize: 12,color: '#f2994a', fontWeight: 'bold', marginTop: 16}}>Rp. 21.350.000,-</Text>
